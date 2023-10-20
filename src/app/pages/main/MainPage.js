@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../components/header/Header';
+import Products from '../../components/products/Products';
 
 
 const MainPage = () => {
@@ -11,12 +12,12 @@ const MainPage = () => {
                     <Header/>
                     <main className='main__inner'>
                         <div className='main__left'>
-                            {/* <Search/> */}
+                         
                             {/* <FiltersByPrice/> */}
                         </div>
                         <div className="main__right">
                             {/* <Filters/> */}
-                            {/* <ProductCards/> */}
+                            <Products/>
                         </div>
                     </main>
 		            {/* <Footer/>  */}

@@ -1,12 +1,14 @@
 import {
     combineReducers
 } from "redux";
-import auth from "../auth/store/AuthSlice";
+import authSlice from "../auth/store/AuthSlice";
+import productSlice from "../pages/main/store/ProductSlice";
 // import categories from "../components/sidebar/store/SidebarSlice"
 
 const createReducer = (asyncReducer) => (state, action) => {
     const combineReducer = combineReducers({
-        auth,
+        authSlice,
+        productSlice,
         ...asyncReducer,
     });
 

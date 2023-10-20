@@ -10,6 +10,12 @@
     
     }
 
+    &_left {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__logo {
         width: 150px;
         display: flex;
