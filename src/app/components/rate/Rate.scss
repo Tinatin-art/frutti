@@ -1,0 +1,40 @@
+// Start rating
+.rating{
+    display: flex;
+    flex-direction: row;
+
+    button{
+        margin-right: 5px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+
+.offrate{
+    background-image: url("../../../assets/icons/star-white-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 22px;
+    height: 22px;
+
+    &:hover{
+         background-image: url("../../../assets/icons/star-yellow-icon.svg");
+    }
+}
+
+.offrates{
+    background-image: url("../../../assets/icons/star-white-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 22px;
+    height: 22px;
+}
+
+.onrate{
+    background-image: url("../../../assets/icons/star-yellow-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 22px;
+    height: 22px;
+
+}

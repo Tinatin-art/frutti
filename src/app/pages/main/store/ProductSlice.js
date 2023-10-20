@@ -5,6 +5,7 @@ import {
 
 import axios from "axios";
 
+// Это временная api для db json-server
 const axiosInstance = axios.create({
     baseURL: 'http://localhost:3003/',
     headers: {
@@ -19,7 +20,6 @@ export const getProducts = createAsyncThunk(
         try {
             const response = await axiosInstance.get("fruits");
 
-            console.log(response)
             return response.data;
         } catch (error) {
             console.log("get products error ", error);
@@ -33,7 +33,6 @@ export const getProductFilter = createAsyncThunk(
         try {
             const response = await axiosInstance.get("filters");
 
-            console.log(response)
             return response.data;
         } catch (error) {
             console.log("get product filter error ", error);
@@ -41,34 +40,38 @@ export const getProductFilter = createAsyncThunk(
     }
 );
 
+export const getProductByID = createAsyncThunk(
+    "products/getProductByID",
+    async (id) => {
+        try {
+            const response = await axiosInstance.get(`fruits/${id}`);
 
+            return response.data;
+        } catch (error) {
+            console.log("get product by id error ", error);
+        }
+    }
+);
 
-// export const signUp = createAsyncThunk(
-//     "auth/signUp",
-//     async ({ datas, navigate }) => {
-//       try {
-//         const response = await instance.post("api/auth/sign-up", datas);
-  
-//         if (response.status === 200) {
-//             Cookies.set("accessToken", response.data.token);
-//             Cookies.set("role", response.data.role);
-//             navigate(`/patent`);
-//         }
-//         return response.data;
-//       } catch (error) {
-//         console.log(error);
-//       }
-//     }
-//   );
-  
+export const updateRate = createAsyncThunk(
+    "products/updateRate",
+    async ({id, newRate}) => {
+        try {
+            const response = await axiosInstance.patch(`fruits/${id}`, JSON.stringify(newRate));
 
-
+            return response.data;
+        } catch (error) {
+            console.log("update rate error ", error);
+        }
+    }
+);
 
 const productSlice = createSlice({
     name: "productSlice",
     initialState: {
         products: [],
         productFilter: [],
+        productByID: [],
         status: "idle",
         error: null,
     },
@@ -88,12 +91,33 @@ const productSlice = createSlice({
             state.status = "loading";
         },
         [getProductFilter.fulfilled]: (state, action) => {
-          state.status = "succeeded";
-          state.productFilter = action.payload
+            state.status = "succeeded";
+            state.productFilter = action.payload
         },
         [getProductFilter.rejected]: (state, action) => {
-          state.status = "failed";
-          state.error = action.error.message;
+            state.status = "failed";
+            state.error = action.error.message;
+        },
+        [getProductByID.pending]: (state, action) => {
+            state.status = "loading";
+        },
+        [getProductByID.fulfilled]: (state, action) => {
+            state.status = "succeeded";
+            state.productByID = action.payload
+        },
+        [getProductByID.rejected]: (state, action) => {
+            state.status = "failed";
+            state.error = action.error.message;
+        },
+        [updateRate.pending]: (state, action) => {
+            state.status = "loading";
+        },
+        [updateRate.fulfilled]: (state, action) => {
+            state.status = "succeeded";
+        },
+        [updateRate.rejected]: (state, action) => {
+            state.status = "failed";
+            state.error = action.error.message;
         },
     },
 });
