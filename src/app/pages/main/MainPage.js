@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../components/header/Header';
 import Products from '../../components/products/Products';
+import ProductFilters from '../../components/products/components/ProductFilter';
 
 
 const MainPage = () => {
@@ -16,6 +17,7 @@ const MainPage = () => {
                             {/* <FiltersByPrice/> */}
                         </div>
                         <div className="main__right">
+                            <ProductFilters />
                             {/* <Filters/> */}
                             <Products/>
                         </div>

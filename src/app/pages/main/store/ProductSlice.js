@@ -27,6 +27,21 @@ export const getProducts = createAsyncThunk(
     }
 );
 
+export const getProductFilter = createAsyncThunk(
+    "products/getProductFilter",
+    async () => {
+        try {
+            const response = await axiosInstance.get("filters");
+
+            console.log(response)
+            return response.data;
+        } catch (error) {
+            console.log("get product filter error ", error);
+        }
+    }
+);
+
+
 
 // export const signUp = createAsyncThunk(
 //     "auth/signUp",
@@ -53,6 +68,7 @@ const productSlice = createSlice({
     name: "productSlice",
     initialState: {
         products: [],
+        productFilter: [],
         status: "idle",
         error: null,
     },
@@ -68,17 +84,17 @@ const productSlice = createSlice({
             state.status = "failed";
             state.error = action.error.message;
         },
-        // [signUp.pending]: (state, action) => {
-        //     state.status = "loading";
-        // },
-        // [signUp.fulfilled]: (state, action) => {
-        //   state.status = "succeeded";
-        //   state.user = action.payload
-        // },
-        // [signUp.rejected]: (state, action) => {
-        //   state.status = "failed";
-        //   state.error = action.error.message;
-        // },
+        [getProductFilter.pending]: (state, action) => {
+            state.status = "loading";
+        },
+        [getProductFilter.fulfilled]: (state, action) => {
+          state.status = "succeeded";
+          state.productFilter = action.payload
+        },
+        [getProductFilter.rejected]: (state, action) => {
+          state.status = "failed";
+          state.error = action.error.message;
+        },
     },
 });
 
