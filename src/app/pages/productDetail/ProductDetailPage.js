@@ -1,26 +1,24 @@
 import React from 'react'
 import ProductByID from './components/ProductByID'
+import Tabs from '../../components/tabs/Tabs'
+import Header from '../../components/header/Header'
 
 const ProductDetailPage = () => {
     return (
         <div className="container">
+            <Header />
             <div className='detail'>
                 <div className='detail__up'>
                     <ProductByID />
                 </div>
-                {/* <Tabs/> */}
+                <Tabs/>
                 <div className='detail__down'>
-                    {/* <Routes>
-                <Route index element={<ProductDescription/>}/>
-                <Route path={`description`} element={<ProductDescription/>}/>
-                <Route path={`feature`} element={<ProductFeature/>}/>
-                <Route path={`comments`} element={<Comments/>}/>
-                <Route path={`delivery-terms`} element={<ProductsDeliveryTerms/>}/>
-            </Routes>
-            <Outlet/> */}
+                    <div>
+                    <p>Цена за упаковку. Вес одной упаковки 500-600 г. Особенно сладкий и ароматный сорт клубники, всем известной ягоды, ассоциирующейся с летней прохладой и нежностью. Богата витаминами и клетчаткой.</p>
+                    </div>
                 </div>
                 <div className='delivery-recommend'>
-                    {/* <ProductsRecommend/> */}
+                    {/* There shoud be recommend product */}
                 </div>
             </div>
         </div>

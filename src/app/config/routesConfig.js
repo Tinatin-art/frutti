@@ -3,12 +3,13 @@ import FuseUtils from "../setup/utils/fuseUtils";
 import { Navigate } from "react-router-dom";
 import AuthConfig from "../auth/AuthConfig";
 import MainPageConfig from "../pages/main/MainPageConfig";
-import ProductDetailPage from "../pages/productDetail/ProductDetailPage";
+import ProductDetailPageConfig from "../pages/productDetail/ProductDetailPageConfig";
 
 
 const routesConfig = [
     AuthConfig,
-    MainPageConfig
+    MainPageConfig,
+    ProductDetailPageConfig
 ];
 
 const routes = [
@@ -17,10 +18,6 @@ const routes = [
   {
     path: "/",
     element: <Navigate to={`/`} />,
-  },
-  {
-    path: "/products/:id",
-    element: <ProductDetailPage />,
   },
 ];
 

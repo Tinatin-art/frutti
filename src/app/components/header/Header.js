@@ -7,10 +7,10 @@ const Header = () => {
     return  <header>
                 <div className="header__menu">
                     <div className='header_left'>
-                        <div className="header__logo">
+                        <Link to={"/"} className="header__logo">
                             <span>F</span>
                             <h2 className="header__logo-name">Frutti</h2>
-                        </div>
+                        </Link>
                         <Search />
                     </div>
                     <div className="menu">

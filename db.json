@@ -549,21 +549,12 @@
     },
     {
       "id": "l2uaaquf",
-      "text": "A CSS comment is used to add explanatory notes to the code or to prevent the browser from interpreting specific parts of the style sheet.",
+      "text": "A5 CSS comment is used to add explanatory notes to the code or to prevent the browser from interpreting specific parts of the style sheet.",
       "rate": 3,
-      "isLiked": true,
-      "totalLiked": 4,
-      "totalDisliked": 4,
+      "isLiked": false,
+      "totalLiked": 6,
+      "totalDisliked": 7,
       "createdOnUtc": "2022-01-10T12:43:51.2065601"
-    },
-    {
-      "id": "l38jbygl",
-      "text": "v cv cb cbvfdfgsfgfg\nojp[pio",
-      "rate": 0,
-      "createdOnUtc": "2022-01-10T12:43:51.2065601",
-      "isLiked": true,
-      "totalLiked": 9,
-      "totalDisliked": 7
     },
     {
       "id": "l3sjgyt8",
@@ -580,6 +571,83 @@
       "createdOnUtc": "2022-01-10T12:43:51.2065601",
       "totalLiked": 0,
       "totalDisliked": 0
+    },
+    {
+      "newComment": {
+        "id": "lo31hqm1",
+        "text": "jkhkhk",
+        "rate": 0,
+        "createdOnUtc": "2022-01-10T12:43:51.2065601",
+        "totalLiked": 0,
+        "totalDisliked": 0
+      },
+      "id": "hpv3RC-"
+    },
+    {
+      "newComment": {
+        "id": "lo31vf2a",
+        "text": "ttry",
+        "rate": 0,
+        "createdOnUtc": "2022-01-10T12:43:51.2065601",
+        "totalLiked": 0,
+        "totalDisliked": 0
+      },
+      "id": "AGJ-VHF"
+    },
+    {
+      "newComment": {
+        "id": "lo31vjcq",
+        "text": "gth",
+        "rate": 0,
+        "createdOnUtc": "2022-01-10T12:43:51.2065601",
+        "totalLiked": 0,
+        "totalDisliked": 0
+      },
+      "id": "zG1rhqX"
+    },
+    {
+      "newComment": {
+        "id": "lo31vxka",
+        "text": "htfhf",
+        "rate": 0,
+        "createdOnUtc": "2022-01-10T12:43:51.2065601",
+        "totalLiked": 0,
+        "totalDisliked": 0
+      },
+      "id": "K5ksmGg"
+    },
+    {
+      "newComment": {
+        "id": "lo31vzoy",
+        "text": "ghthf",
+        "rate": 0,
+        "createdOnUtc": "2022-01-10T12:43:51.2065601",
+        "totalLiked": 0,
+        "totalDisliked": 0
+      },
+      "id": "TbcjRfO"
+    },
+    {
+      "newComment": {
+        "id": "lo31w785",
+        "text": "hjg",
+        "rate": 0,
+        "createdOnUtc": "2022-01-10T12:43:51.2065601",
+        "totalLiked": 0,
+        "totalDisliked": 0
+      },
+      "id": "qG2lY4g"
+    },
+    {
+      "newComment": {
+        "id": "lo323aoa",
+        "text": "ioup",
+        "rate": 5,
+        "createdOnUtc": "2022-01-10T12:43:51.2065601",
+        "totalLiked": 0,
+        "totalDisliked": 0
+      },
+      "id": "MgO54Gk"
     }
   ]
 }

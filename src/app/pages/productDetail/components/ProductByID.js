@@ -1,11 +1,10 @@
 import React, { useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import pear from "../../../../assets/images/pear.jpg";
-// import { getOneProducts  } from '../../actions/productsAction';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProductByID } from '../../main/store/ProductSlice';
+import { getProductByID } from '../../store/ProductSlice';
 import Rate from '../../../components/rate/Rate';
-// import Rating from '../Ratings/Rating';
+
 
 
 const ProductByID = () => {

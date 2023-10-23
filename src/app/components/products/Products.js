@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ProductCard from './components/ProductCard'
 import { useDispatch, useSelector } from 'react-redux';
-import { getProducts } from '../../pages/main/store/ProductSlice';
+import { getProducts } from '../../pages/store/ProductSlice';
 import ProductFilters from './components/ProductFilter';
 
 const Products = () => {

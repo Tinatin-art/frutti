@@ -14,6 +14,7 @@
         width: 60%;
         display: flex;
         justify-content: space-between;
+        
     }
 
     &__logo {
@@ -38,6 +39,7 @@
         &-name{
             font-size: 30px;
             font-weight: 900;
+            color: black;
             
         }
     }

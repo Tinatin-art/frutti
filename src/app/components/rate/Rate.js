@@ -1,6 +1,6 @@
 import React , {useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { updateRate } from '../../pages/main/store/ProductSlice';
+import { updateRate } from '../../pages/store/ProductSlice';
 
 
 const Rate = ({rate, id , rateQuantity }) => {
